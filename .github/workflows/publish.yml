@@ -1,6 +1,8 @@
 name: 🏗️Build and 📦publish ☀️release
 
-on: push
+on:
+  push:
+    branches: [main]
 
 jobs:
   build:
