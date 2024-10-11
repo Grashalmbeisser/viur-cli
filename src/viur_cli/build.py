@@ -157,7 +157,7 @@ def release(profile, additional_args):
     for build_name, build_cfg in conf.get("builds", {}).items():
         _build(conf, build_name, build_cfg, additional_args)
 
-    utils.echo_info("building finished!")
+    utils.echo_positive("building finished!")
 
 
 @build.command(context_settings={"ignore_unknown_options": True})
@@ -188,7 +188,7 @@ def app(appname, profile, additional_args):
 
     utils.echo_info("building started...")
     _build(conf, appname, build_cfg, additional_args)
-    utils.echo_info("building finished!")
+    utils.echo_positive("building finished!")
 
 
 @build.command
@@ -229,4 +229,4 @@ def clean(target, profile):
     for build_name, build_cfg in builds.items():
         _clean(conf, build_name, build_cfg)
 
-    utils.echo_info("clean finished!")
+    utils.echo_positive("clean finished!")
