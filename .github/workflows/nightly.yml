@@ -8,6 +8,8 @@ jobs:
   build:
     name: 🏗️ Build package
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
     steps:
       - uses: actions/checkout@v3
       - name: Generate version number
